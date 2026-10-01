@@ -1,0 +1,91 @@
+{
+ "size": [
+  1800,
+  600
+ ],
+ "out": "final/email-header-04.jpg",
+ "plate": {
+  "src": "hero.png",
+  "fit": "cover",
+  "focus": [
+   0.75,
+   0.45
+  ]
+ },
+ "grade": [
+  {
+   "type": "linear",
+   "from": [
+    0,
+    0
+   ],
+   "to": [
+    0,
+    1
+   ],
+   "color": "#1E2638",
+   "opacity": [
+    0.25,
+    0.72
+   ]
+  }
+ ],
+ "light": [
+  {
+   "type": "slash",
+   "angle": -12,
+   "x": 0.5,
+   "width": 0.19,
+   "color": "#A9622F",
+   "opacity": 0.88,
+   "blur": 0,
+   "blend": "normal"
+  },
+  {
+   "type": "slash",
+   "angle": -12,
+   "x": 0.5,
+   "width": 0.19,
+   "color": "#D9965F",
+   "opacity": 0.25,
+   "blur": 40
+  }
+ ],
+ "emblem": {
+  "src": "emblem/emblem-depth.png",
+  "anchor": [
+   0.5,
+   0.47
+  ],
+  "height": 0.58,
+  "depth": {
+   "shadow": 0.6,
+   "glow": "#D9965F",
+   "glow_opacity": 0.35,
+   "rim": true
+  }
+ },
+ "text": [
+  {
+   "text": "QUIET HOURS",
+   "font": "/Users/tone/Library/Mobile Documents/com~apple~CloudDocs/_Freedom Builderz/FBZ_Claude_Code/skills/fbz-visual-production/fonts/DMSans.ttf",
+   "weight": 600,
+   "size": 22,
+   "color": "#F7F2EA",
+   "anchor": [
+    0.5,
+    0.9
+   ],
+   "align": "center",
+   "tracking": 10
+  }
+ ],
+ "grain": {
+  "amount": 0.035,
+  "seed": 3
+ },
+ "vignette": {
+  "strength": 0.36,
+  "softness": 0.62
+ }
+}

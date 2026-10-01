@@ -1,0 +1,85 @@
+{
+ "size": [
+  2688,
+  1520
+ ],
+ "out": "final/hero.jpg",
+ "plate": {
+  "src": "hero.png",
+  "fit": "cover",
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ "grade": [
+  {
+   "type": "linear",
+   "from": [
+    0,
+    0
+   ],
+   "to": [
+    1,
+    0
+   ],
+   "color": "#1E2638",
+   "opacity": [
+    0.45,
+    0.0
+   ]
+  },
+  {
+   "type": "linear",
+   "from": [
+    0,
+    0.4
+   ],
+   "to": [
+    0,
+    1
+   ],
+   "color": "#1E2638",
+   "opacity": [
+    0.0,
+    0.35
+   ]
+  },
+  {
+   "type": "radial",
+   "center": [
+    0.86,
+    0.42
+   ],
+   "radius": 0.35,
+   "color": "#D9965F",
+   "opacity": [
+    0.3,
+    0.0
+   ],
+   "blend": "screen"
+  }
+ ],
+ "light": [
+  {
+   "type": "rays",
+   "origin": [
+    1.05,
+    -0.2
+   ],
+   "color": "#FFE9CC",
+   "opacity": 0.14,
+   "blur": 80,
+   "count": 5,
+   "seed": 9
+  }
+ ],
+ "grain": {
+  "amount": 0.03,
+  "seed": 2
+ },
+ "vignette": {
+  "strength": 0.3,
+  "softness": 0.62
+ }
+}

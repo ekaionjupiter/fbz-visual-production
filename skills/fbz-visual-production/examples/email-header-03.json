@@ -1,0 +1,104 @@
+{
+ "size": [
+  1800,
+  600
+ ],
+ "out": "final/email-header-03.jpg",
+ "plate": {
+  "src": "ad-bg-e-window-blue-hour.png",
+  "fit": "cover",
+  "focus": [
+   0.5,
+   0.35
+  ],
+  "scale": 1.0
+ },
+ "grade": [
+  {
+   "type": "linear",
+   "from": [
+    0,
+    0
+   ],
+   "to": [
+    0,
+    1
+   ],
+   "color": "#1E2638",
+   "opacity": [
+    0.1,
+    0.75
+   ]
+  },
+  {
+   "type": "radial",
+   "center": [
+    0.5,
+    0.45
+   ],
+   "radius": 0.5,
+   "color": "#D9965F",
+   "opacity": [
+    0.34,
+    0.0
+   ],
+   "blend": "screen"
+  }
+ ],
+ "light": [
+  {
+   "type": "bokeh",
+   "count": 22,
+   "color": "#D9965F",
+   "opacity": 0.3,
+   "seed": 11
+  }
+ ],
+ "emblem": {
+  "src": "emblem/emblem-depth.png",
+  "anchor": [
+   0.5,
+   0.42
+  ],
+  "height": 0.5,
+  "depth": {
+   "shadow": 0.5,
+   "glow": "#D9965F",
+   "glow_opacity": 0.5,
+   "rim": true
+  }
+ },
+ "text": [
+  {
+   "text": "RHYTHM  \u00b7  ROOM  \u00b7  RESPONSE  \u00b7  RELAY  \u00b7  RECOVERY",
+   "font": "/Users/tone/Library/Mobile Documents/com~apple~CloudDocs/_Freedom Builderz/FBZ_Claude_Code/skills/fbz-visual-production/fonts/DMSans.ttf",
+   "weight": 600,
+   "size": 26,
+   "color": "#FFFFFF",
+   "anchor": [
+    0.5,
+    0.86
+   ],
+   "align": "center",
+   "tracking": 9,
+   "band": {
+    "color": "#A9622F",
+    "opacity": 0.94,
+    "pad": [
+     16,
+     56
+    ],
+    "skew": 0,
+    "full_width": false
+   }
+  }
+ ],
+ "grain": {
+  "amount": 0.035,
+  "seed": 3
+ },
+ "vignette": {
+  "strength": 0.34,
+  "softness": 0.62
+ }
+}

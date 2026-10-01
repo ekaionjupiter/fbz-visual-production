@@ -32,3 +32,17 @@ The model rendered both of these without errors. They were rejected in self-revi
 ## Derived files
 - `the-evening-rhythm-guide.pdf`: the lead magnet exported from `pages/lead-magnet.html` as 5 US Letter pages, checked to fit with no overflow.
 - `quiet-hours.tokens.json`: the brand system and single source of truth. `pages/_src/quiet-hours.css` implements it.
+
+## Upgrade pass (2026-09-30, fbz-visual-production skill v1)
+Method: plates from Higgsfield (gpt_image_2_5, high, 2K), emblem rendered as brushed brass via image-to-image on the vector mark (shape locked), then every finished asset composited in code with `build_assets.py` (grade, light, emblem with depth, type band in Fraunces/DM Sans, grain, vignette). 11 new generations at 2.75 credits (30.25 credits). No failed calls.
+
+| Asset | Plate job | Score vs Leonel tiles |
+|---|---|---|
+| Email headers 01 to 04 (1800x600) | 1a262547, b9d2be26, existing adE, existing hero | 4.5 |
+| Emblem depth (brass, chosen) and ceramic (alt) | 62f23399, 3f6f6a99 | 4.5 |
+| Ads 01 to 05 feed (1080x1350) | existing A to E plates | 4 |
+| Ads 01 to 05 story (1080x1920) | 83dde303, 6295487b, 7983945b, 6593ce64, 534b7c20 | 4 |
+| Hero re-grade | existing hero | 4 |
+| Lead-magnet cover (blank booklet plate, title set in code, two passes) | ecc1f30c | 4 |
+
+Finals: `final/`. Specs: `skills/fbz-visual-production/examples/`. Old flat versions kept as `hero.png`, `lead-magnet-cover.png` (plates). Impeccable detect on the sales page: 4 warnings (eyebrow-over-headline, side-tab note card, 2 contrast false-positives on hidden text); logged, not changed because the reference layout uses the same patterns.

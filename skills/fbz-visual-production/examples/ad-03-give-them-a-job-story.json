@@ -1,0 +1,118 @@
+{
+ "size": [
+  1080,
+  1920
+ ],
+ "out": "final/ad-03-give-them-a-job-story.jpg",
+ "plate": {
+  "src": "plates/story-c-dad.png",
+  "fit": "cover",
+  "focus": [
+   0.5,
+   0.55
+  ]
+ },
+ "grade": [
+  {
+   "type": "linear",
+   "from": [
+    0,
+    1
+   ],
+   "to": [
+    0,
+    0
+   ],
+   "color": "#1E2638",
+   "opacity": [
+    0.0,
+    0.82
+   ]
+  },
+  {
+   "type": "radial",
+   "center": [
+    0.5,
+    0.12
+   ],
+   "radius": 0.6,
+   "color": "#D9965F",
+   "opacity": [
+    0.22,
+    0.0
+   ],
+   "blend": "screen"
+  }
+ ],
+ "light": [
+  {
+   "type": "bokeh",
+   "count": 10,
+   "color": "#D9965F",
+   "opacity": 0.22,
+   "seed": 5
+  }
+ ],
+ "emblem": {
+  "src": "emblem/emblem-depth.png",
+  "anchor": [
+   0.11,
+   0.9
+  ],
+  "height": 0.04,
+  "depth": {
+   "shadow": 0.4,
+   "glow": "#D9965F",
+   "glow_opacity": 0.3,
+   "rim": false
+  }
+ },
+ "text": [
+  {
+   "text": "He wanted to help.\nNobody gave him\na job.",
+   "font": "/Users/tone/Library/Mobile Documents/com~apple~CloudDocs/_Freedom Builderz/FBZ_Claude_Code/skills/fbz-visual-production/fonts/Fraunces.ttf",
+   "weight": 350,
+   "size": 84,
+   "color": "#F7F2EA",
+   "anchor": [
+    0.5,
+    0.2
+   ],
+   "align": "center",
+   "tracking": -1,
+   "line_height": 1.08,
+   "shadow": true
+  },
+  {
+   "text": "THE NIGHT RELAY, FREE GUIDE",
+   "font": "/Users/tone/Library/Mobile Documents/com~apple~CloudDocs/_Freedom Builderz/FBZ_Claude_Code/skills/fbz-visual-production/fonts/DMSans.ttf",
+   "weight": 600,
+   "size": 22,
+   "color": "#FFFFFF",
+   "anchor": [
+    0.5,
+    0.9
+   ],
+   "align": "center",
+   "tracking": 4,
+   "band": {
+    "color": "#A9622F",
+    "opacity": 0.96,
+    "pad": [
+     14,
+     34
+    ],
+    "skew": 0,
+    "full_width": false
+   }
+  }
+ ],
+ "grain": {
+  "amount": 0.035,
+  "seed": 3
+ },
+ "vignette": {
+  "strength": 0.28,
+  "softness": 0.62
+ }
+}

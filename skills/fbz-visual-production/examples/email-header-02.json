@@ -1,0 +1,117 @@
+{
+ "size": [
+  1800,
+  600
+ ],
+ "out": "final/email-header-02.jpg",
+ "plate": {
+  "src": "plates/header-mother-window.png",
+  "fit": "cover",
+  "focus": [
+   0.35,
+   0.5
+  ]
+ },
+ "grade": [
+  {
+   "type": "linear",
+   "from": [
+    0,
+    0
+   ],
+   "to": [
+    1,
+    0
+   ],
+   "color": "#1E2638",
+   "opacity": [
+    0.05,
+    0.82
+   ]
+  },
+  {
+   "type": "radial",
+   "center": [
+    0.14,
+    0.5
+   ],
+   "radius": 0.45,
+   "color": "#D9965F",
+   "opacity": [
+    0.3,
+    0.0
+   ],
+   "blend": "screen"
+  }
+ ],
+ "light": [
+  {
+   "type": "slash",
+   "angle": -16,
+   "x": 0.405,
+   "width": 0.006,
+   "color": "#D9965F",
+   "opacity": 0.95,
+   "blur": 2
+  },
+  {
+   "type": "slash",
+   "angle": -16,
+   "x": 0.405,
+   "width": 0.05,
+   "color": "#D9965F",
+   "opacity": 0.35,
+   "blur": 26
+  }
+ ],
+ "emblem": {
+  "src": "emblem/emblem-depth.png",
+  "anchor": [
+   0.165,
+   0.5
+  ],
+  "height": 0.44,
+  "depth": {
+   "shadow": 0.5,
+   "glow": "#D9965F",
+   "glow_opacity": 0.4,
+   "rim": true
+  }
+ },
+ "text": [
+  {
+   "text": "First 90 Nights",
+   "font": "/Users/tone/Library/Mobile Documents/com~apple~CloudDocs/_Freedom Builderz/FBZ_Claude_Code/skills/fbz-visual-production/fonts/Fraunces.ttf",
+   "weight": 350,
+   "size": 112,
+   "color": "#F7F2EA",
+   "anchor": [
+    0.69,
+    0.44
+   ],
+   "align": "center",
+   "tracking": -1
+  },
+  {
+   "text": "A CALM, SHARED PLAN FOR YOUR EVENINGS AND NIGHTS",
+   "font": "/Users/tone/Library/Mobile Documents/com~apple~CloudDocs/_Freedom Builderz/FBZ_Claude_Code/skills/fbz-visual-production/fonts/DMSans.ttf",
+   "weight": 600,
+   "size": 22,
+   "color": "#D9965F",
+   "anchor": [
+    0.69,
+    0.6
+   ],
+   "align": "center",
+   "tracking": 6
+  }
+ ],
+ "grain": {
+  "amount": 0.035,
+  "seed": 3
+ },
+ "vignette": {
+  "strength": 0.3,
+  "softness": 0.62
+ }
+}

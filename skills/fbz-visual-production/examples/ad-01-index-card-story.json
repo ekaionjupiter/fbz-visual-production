@@ -1,0 +1,96 @@
+{
+ "size": [
+  1080,
+  1920
+ ],
+ "out": "final/ad-01-index-card-story.jpg",
+ "plate": {
+  "src": "plates/story-d-flatlay.png",
+  "fit": "cover",
+  "focus": [
+   0.5,
+   0.55
+  ]
+ },
+ "grade": [
+  {
+   "type": "linear",
+   "from": [
+    0,
+    1
+   ],
+   "to": [
+    0,
+    0
+   ],
+   "color": "#EDE4D6",
+   "opacity": [
+    0.0,
+    0.55
+   ]
+  }
+ ],
+ "light": [],
+ "emblem": {
+  "src": "emblem/emblem-depth.png",
+  "anchor": [
+   0.11,
+   0.9
+  ],
+  "height": 0.04,
+  "depth": {
+   "shadow": 0.4,
+   "glow": "#D9965F",
+   "glow_opacity": 0.3,
+   "rim": false
+  }
+ },
+ "text": [
+  {
+   "text": "I had a PhD in\ninfant routines.\nIt didn't help at 3 a.m.",
+   "font": "/Users/tone/Library/Mobile Documents/com~apple~CloudDocs/_Freedom Builderz/FBZ_Claude_Code/skills/fbz-visual-production/fonts/Fraunces.ttf",
+   "weight": 350,
+   "size": 84,
+   "color": "#1E2638",
+   "anchor": [
+    0.5,
+    0.2
+   ],
+   "align": "center",
+   "tracking": -1,
+   "line_height": 1.08,
+   "shadow": false
+  },
+  {
+   "text": "FREE: THE EVENING RHYTHM GUIDE",
+   "font": "/Users/tone/Library/Mobile Documents/com~apple~CloudDocs/_Freedom Builderz/FBZ_Claude_Code/skills/fbz-visual-production/fonts/DMSans.ttf",
+   "weight": 600,
+   "size": 22,
+   "color": "#FFFFFF",
+   "anchor": [
+    0.5,
+    0.9
+   ],
+   "align": "center",
+   "tracking": 4,
+   "band": {
+    "color": "#A9622F",
+    "opacity": 0.96,
+    "pad": [
+     14,
+     34
+    ],
+    "skew": 0,
+    "full_width": false
+   }
+  }
+ ],
+ "grain": {
+  "amount": 0.035,
+  "seed": 3
+ },
+ "vignette": {
+  "strength": 0.28,
+  "softness": 0.62
+ }
+}

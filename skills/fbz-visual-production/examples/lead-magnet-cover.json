@@ -1,0 +1,133 @@
+{
+ "size": [
+  1792,
+  2240
+ ],
+ "out": "final/lead-magnet-cover.jpg",
+ "plate": {
+  "src": "plates/cover-blank-booklet.png",
+  "fit": "cover",
+  "focus": [
+   0.5,
+   0.5
+  ]
+ },
+ "grade": [
+  {
+   "type": "linear",
+   "from": [
+    0,
+    0
+   ],
+   "to": [
+    0,
+    1
+   ],
+   "color": "#1E2638",
+   "opacity": [
+    0.0,
+    0.22
+   ]
+  },
+  {
+   "type": "radial",
+   "center": [
+    0.78,
+    0.12
+   ],
+   "radius": 0.7,
+   "color": "#FFF4E2",
+   "opacity": [
+    0.22,
+    0.0
+   ],
+   "blend": "screen"
+  }
+ ],
+ "light": [],
+ "text": [
+  {
+   "text": "QUIET HOURS",
+   "font": "/Users/tone/Library/Mobile Documents/com~apple~CloudDocs/_Freedom Builderz/FBZ_Claude_Code/skills/fbz-visual-production/fonts/DMSans.ttf",
+   "weight": 600,
+   "size": 24,
+   "color": "#6B6457",
+   "anchor": [
+    0.37,
+    0.375
+   ],
+   "align": "center",
+   "tracking": 9,
+   "rotate": 8,
+   "shadow": false
+  },
+  {
+   "text": "The Evening\nRhythm Guide",
+   "font": "/Users/tone/Library/Mobile Documents/com~apple~CloudDocs/_Freedom Builderz/FBZ_Claude_Code/skills/fbz-visual-production/fonts/Fraunces.ttf",
+   "weight": 350,
+   "size": 96,
+   "color": "#1E2638",
+   "anchor": [
+    0.385,
+    0.465
+   ],
+   "align": "center",
+   "tracking": -1,
+   "line_height": 1.02,
+   "rotate": 8,
+   "shadow": false
+  },
+  {
+   "text": "A calm, printable plan for your\nbaby's evenings and nights",
+   "font": "/Users/tone/Library/Mobile Documents/com~apple~CloudDocs/_Freedom Builderz/FBZ_Claude_Code/skills/fbz-visual-production/fonts/Fraunces-Italic.ttf",
+   "weight": 350,
+   "size": 31,
+   "color": "#4A5368",
+   "anchor": [
+    0.395,
+    0.575
+   ],
+   "align": "center",
+   "line_height": 1.25,
+   "rotate": 8,
+   "shadow": false
+  },
+  {
+   "text": "DR. LENA PARK",
+   "font": "/Users/tone/Library/Mobile Documents/com~apple~CloudDocs/_Freedom Builderz/FBZ_Claude_Code/skills/fbz-visual-production/fonts/DMSans.ttf",
+   "weight": 600,
+   "size": 22,
+   "color": "#F7F2EA",
+   "anchor": [
+    0.4,
+    0.8
+   ],
+   "align": "center",
+   "tracking": 10,
+   "rotate": 8,
+   "shadow": false
+  }
+ ],
+ "emblem": {
+  "src": "emblem/emblem-depth.png",
+  "anchor": [
+   0.37,
+   0.315
+  ],
+  "height": 0.05,
+  "depth": {
+   "shadow": 0.25,
+   "glow": "#D9965F",
+   "glow_opacity": 0.0,
+   "rim": false
+  }
+ },
+ "grain": {
+  "amount": 0.025,
+  "seed": 5
+ },
+ "vignette": {
+  "strength": 0.22,
+  "softness": 0.62
+ }
+}

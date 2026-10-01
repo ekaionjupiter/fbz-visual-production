@@ -135,8 +135,7 @@ def place_emblem(canvas, spec):
         rim.putalpha(edge.point(lambda v: int(v*0.55))); canvas.alpha_composite(rim.filter(ImageFilter.GaussianBlur(1)), (x,y))
     return canvas
 
-def draw_text(canvas, spec):
-    W,H = canvas.size
+def _font(spec):
     try:
         font = ImageFont.truetype(spec['font'], spec['size'])
         if spec.get('weight') or spec.get('opsz'):
@@ -149,26 +148,38 @@ def draw_text(canvas, spec):
                     else: vals.append(a['default'])
                 font.set_variation_by_axes(vals)
             except Exception: pass
-    except Exception: font = ImageFont.load_default()
-    text = spec['text']; tracking = spec.get('tracking',0)
-    # measure with tracking
-    widths = [font.getlength(ch) for ch in text]; tw = sum(widths) + tracking*(len(text)-1); th = spec['size']*1.2
+        return font
+    except Exception: return ImageFont.load_default()
+
+def draw_text(canvas, spec):
+    """Multi-line text (split on \n), optional band, shadow, tracking, rotation. Anchor is the block center."""
+    W,H = canvas.size; font = _font(spec); tracking = spec.get('tracking',0); lh = spec.get('line_height',1.15)
+    lines = spec['text'].split('\n'); size = spec['size']
+    widths = [[font.getlength(ch) for ch in ln] for ln in lines]
+    lw = [sum(w)+tracking*max(len(ln)-1,0) for w,ln in zip(widths,lines)]
+    bw = max(lw); bh = size*lh*len(lines)
     ax,ay = spec.get('anchor',[0.5,0.5]); align = spec.get('align','center')
-    x0 = ax*W - (tw/2 if align=='center' else (tw if align=='right' else 0)); y0 = ay*H - th/2
+    bx0 = ax*W - bw/2; by0 = ay*H - bh/2
+    layer = Image.new('RGBA', canvas.size, (0,0,0,0))
     band = spec.get('band')
     if band:
-        pt,pr = band.get('pad',[16,40]); bl = Image.new('RGBA', canvas.size, (0,0,0,0)); d = ImageDraw.Draw(bl)
-        bx0 = 0 if band.get('full_width') else x0-pr; bx1 = W if band.get('full_width') else x0+tw+pr
-        by0, by1 = y0-pt, y0+th+pt; sk = math.tan(math.radians(band.get('skew',0)))*(by1-by0)
-        d.polygon([(bx0+sk/2,by0),(bx1+sk/2,by0),(bx1-sk/2,by1),(bx0-sk/2,by1)], fill=hexrgb(band['color'], int(band.get('opacity',1)*255)))
-        canvas = Image.alpha_composite(canvas, bl)
-    layer = Image.new('RGBA', canvas.size, (0,0,0,0)); d = ImageDraw.Draw(layer)
-    if spec.get('shadow', True):
-        sl = Image.new('RGBA', canvas.size, (0,0,0,0)); sd = ImageDraw.Draw(sl); cx = x0
-        for ch,w in zip(text,widths): sd.text((cx+2, y0+3), ch, font=font, fill=(0,0,0,150)); cx += w+tracking
-        canvas = Image.alpha_composite(canvas, sl.filter(ImageFilter.GaussianBlur(3)))
-    cx = x0
-    for ch,w in zip(text,widths): d.text((cx, y0), ch, font=font, fill=hexrgb(spec.get('color','#FFFFFF'))); cx += w+tracking
+        pt,pr = band.get('pad',[16,40]); d = ImageDraw.Draw(layer)
+        x0 = 0 if band.get('full_width') else bx0-pr; x1 = W if band.get('full_width') else bx0+bw+pr
+        y0, y1 = by0-pt, by0+bh+pt; sk = math.tan(math.radians(band.get('skew',0)))*(y1-y0)
+        d.polygon([(x0+sk/2,y0),(x1+sk/2,y0),(x1-sk/2,y1),(x0-sk/2,y1)], fill=hexrgb(band['color'], int(band.get('opacity',1)*255)))
+    txt = Image.new('RGBA', canvas.size, (0,0,0,0)); d = ImageDraw.Draw(txt)
+    sh = Image.new('RGBA', canvas.size, (0,0,0,0)); sd = ImageDraw.Draw(sh)
+    for i,(ln,ws) in enumerate(zip(lines,widths)):
+        y = by0 + i*size*lh
+        x = bx0 + (bw-lw[i])/2 if align=='center' else (bx0 + bw-lw[i] if align=='right' else bx0)
+        for ch,w in zip(ln,ws):
+            if spec.get('shadow', True): sd.text((x+2,y+3), ch, font=font, fill=(0,0,0,150))
+            d.text((x,y), ch, font=font, fill=hexrgb(spec.get('color','#FFFFFF'))); x += w+tracking
+    if spec.get('shadow', True): layer = Image.alpha_composite(layer, sh.filter(ImageFilter.GaussianBlur(3)))
+    layer = Image.alpha_composite(layer, txt)
+    if spec.get('rotate'):
+        cx,cy = ax*W, ay*H
+        layer = layer.rotate(spec['rotate'], resample=Image.BICUBIC, center=(cx,cy))
     return Image.alpha_composite(canvas, layer)
 
 def add_grain(canvas, amount, seed=1):
