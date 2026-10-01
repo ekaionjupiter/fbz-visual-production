@@ -13,7 +13,13 @@ Status: Phases 0 to 4 are complete. **Pushed to Figma on 2026-09-30:** https://w
 | Mobile (390) | Waitlist Sales Page, Thank-You Page, Offer Cart |
 | Assets | The 9 Higgsfield images, used as image fills |
 
-Every page is built from editable text and component instances. There are no flattened screenshots.
+Every page is built from editable text and component instances. There are no flattened screenshots. Page 1 ("Pre-Launch Kit") is now a single canvas with every deliverable in a grid; Foundations, Components and Assets are the back pages.
+
+## Image upgrade (fbz-visual-production skill)
+All hero, cover, email-header and ad images were rebuilt as layered composites (Higgsfield plate + grade + light + brass emblem with depth + type in Fraunces/DM Sans + grain + vignette). Finals: `assets/final/`. Build script: `assets/build_assets.py`. Log and scores: `assets/ASSET-LOG.md`.
+
+## Delivery
+Drive: "Mid Ticket Storage / Lena Park - Pre-Launch Kit" (https://drive.google.com/drive/folders/1Kx67WVSSlSXiAikEPmHoAHaT4b0s-W9c), subfolders 00 to 08. Binder docs are Google Docs; renders, HTML, PDF and images are native files.
 
 ## Where everything lives
 
