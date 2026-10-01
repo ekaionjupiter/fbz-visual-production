@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quiet Hours Brand Board</title>
+<meta name="description" content="Brand board for Quiet Hours, pediatric sleep with Dr. Lena Park.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..500,0..100,0;1,9..144,300..500,0..100,0&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="quiet-hours.css">
+<style>
+  .bb-hero{background:var(--night-ink);color:var(--moonlight);padding-block:clamp(3.5rem,2rem + 5vw,6.5rem);position:relative;overflow:hidden}
+  .bb-hero .glow{position:absolute;right:-12rem;top:-10rem;width:36rem;height:36rem;border-radius:50%;background:radial-gradient(circle,rgba(217,150,95,.28),rgba(217,150,95,0) 65%);pointer-events:none}
+  .bb-hero .meta{display:flex;flex-wrap:wrap;gap:.5rem 2rem;font-size:var(--t-caption);color:var(--mist);letter-spacing:.04em}
+  .bb-label{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;border-bottom:1px solid var(--line);padding-bottom:1rem;margin-bottom:clamp(1.75rem,1.4rem + 1.5vw,2.75rem)}
+  .bb-label h2{font-size:var(--t-m)}
+  .bb-label span{font-size:var(--t-caption);color:var(--text-2);letter-spacing:.12em;text-transform:uppercase;font-weight:600;white-space:nowrap}
+  .bb-label{flex-wrap:wrap}@media(max-width:40rem){.bb-label span{white-space:normal}}
+  .logo-tiles{display:grid;gap:1rem}
+  @media(min-width:48rem){.logo-tiles{grid-template-columns:1.4fr 1fr 1fr}}
+  .logo-tile{border-radius:var(--r-l);min-height:15rem;display:grid;place-items:center;padding:2rem;position:relative}
+  .logo-tile .cap{position:absolute;left:1.25rem;bottom:1rem;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;opacity:.75}
+  .lockup{display:flex;flex-direction:column;align-items:center;gap:1rem;text-align:center}
+  .lockup svg{width:56px;height:56px}
+  .lockup .wm{font-family:var(--f-display);font-size:clamp(2.25rem,1.8rem + 2vw,3.25rem);letter-spacing:.06em;line-height:1;font-weight:350}
+  .lockup .ds{font-size:.6875rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600}
+  .swatches{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+  @media(min-width:48rem){.swatches{grid-template-columns:repeat(4,1fr)}}
+  .sw{border-radius:var(--r-l);overflow:hidden;border:1px solid var(--line);background:#fff}
+  .sw .swatch{height:8.5rem;display:flex;align-items:flex-end;padding:1rem;font-size:.8125rem;font-weight:600}
+  .sw .info{padding:1rem 1rem 1.1rem;font-size:.8125rem;line-height:1.5;color:var(--muted)}
+  .sw .info b{display:block;color:var(--night-ink);font-size:.9375rem;font-weight:600;margin-bottom:.15rem}
+  .sw .info code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.75rem;color:var(--night-ink)}
+  .ratio-bar{display:flex;height:2.75rem;border-radius:var(--pill);overflow:hidden;margin-top:1.25rem;border:1px solid var(--line)}
+  .ratio-bar div{display:grid;place-items:center;font-size:.6875rem;font-weight:600;letter-spacing:.08em;white-space:nowrap;overflow:hidden}
+  @media(max-width:40rem){.ratio-bar div{font-size:.5rem;letter-spacing:.04em}}
+  .type-row>*{min-width:0;overflow-wrap:break-word}.type-row{display:grid;gap:.5rem 2rem;padding-block:1.5rem;border-bottom:1px solid var(--line)}
+  @media(min-width:48rem){.type-row{grid-template-columns:11rem 1fr;align-items:baseline}}
+  .type-row .spec{font-size:.8125rem;color:var(--text-2);line-height:1.5}
+  .type-row .spec b{display:block;color:var(--text);font-weight:600;font-size:.875rem}
+  .specimen{display:grid;gap:1rem}
+  @media(min-width:48rem){.specimen{grid-template-columns:1fr 1fr}}
+  .specimen .card .big{font-size:clamp(4rem,3rem + 4vw,6.5rem);line-height:1;margin-bottom:.75rem}
+  .space-scale{display:flex;align-items:flex-end;gap:.75rem;flex-wrap:wrap}
+  .space-scale div{display:flex;flex-direction:column;align-items:center;gap:.5rem;font-size:.75rem;color:var(--text-2)}
+  .space-scale i{display:block;background:var(--lamplight);opacity:.85;border-radius:3px}
+  .comp-grid{display:grid;gap:1rem}
+  @media(min-width:48rem){.comp-grid{grid-template-columns:repeat(3,1fr)}}
+  .comp{border:1px solid var(--line);border-radius:var(--r-l);padding:1.5rem;display:flex;flex-direction:column;gap:1rem;background:var(--card)}
+  .comp .cap{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--text-2)}
+  .img-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+  @media(min-width:48rem){.img-grid{grid-template-columns:repeat(4,1fr)}.img-grid .wide{grid-column:span 2;grid-row:span 2}}
+  .img-grid figure{margin:0}
+  .photo-rules .note-card{padding:.9rem 1rem}
+  @media(max-width:47.99rem){.photo-rules{grid-column:1/-1}}
+  @media(max-width:30rem){.lockup .wm{font-size:2rem!important;letter-spacing:.03em}.lockup .ds{font-size:.5625rem;letter-spacing:.16em}}
+  .img-grid figcaption{font-size:.75rem;color:var(--text-2);margin-top:.5rem;letter-spacing:.02em}
+  .voice{display:grid;gap:1rem}
+  @media(min-width:48rem){.voice{grid-template-columns:repeat(2,1fr)}}
+  .say,.dont{border-radius:var(--r-l);padding:1.75rem}
+  .say{background:var(--night-ink);color:var(--moonlight)}
+  .dont{background:var(--card);border:1px solid var(--line)}
+  .say li,.dont li{list-style:none;padding:.7rem 0;border-top:1px solid rgba(255,255,255,.1);font-family:var(--f-display);font-size:1.1875rem;line-height:1.35}
+  .dont li{border-top-color:var(--line);color:var(--text-2);text-decoration:line-through;text-decoration-color:rgba(169,98,47,.6);text-decoration-thickness:1px;font-family:var(--f-body);font-size:1rem}
+  .say h3,.dont h3{font-family:var(--f-body);font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;margin-bottom:.75rem}
+  .say h3{color:var(--lamplight)} .dont h3{color:var(--text-2)}
+</style>
+</head>
+<body>
+
+<header class="bb-hero">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="container stack-l" style="position:relative">
+    <div class="logo" style="color:var(--moonlight)">
+      <svg class="emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M3.13 14.2A13 13 0 0 1 28.87 14.2"/><path d="M28.87 17.8A13 13 0 0 1 3.13 17.8"/><path d="M14.55 10.03A6.6 6.6 0 1 0 21.64 18.07A5.4 5.4 0 0 1 14.55 10.03Z" stroke-linejoin="round"/></svg>
+      <span class="wm">Quiet Hours<small style="color:var(--mist)">Brand Board v1.0</small></span>
+    </div>
+    <div class="stack" style="max-width:48rem">
+      <span class="eyebrow" style="color:var(--lamplight)">Identity system</span>
+      <h1 class="t-xl">A dim room where someone calm already has the kettle on.</h1>
+      <p class="lead" style="color:var(--mist);max-width:38rem">Quiet Hours is the pediatric sleep practice of Dr. Lena Park. The brand should feel calm, capable, and accompanied. It should read easily on a phone, one-handed, at 3 a.m.</p>
+    </div>
+    <div class="meta"><span>Client: Dr. Lena Park</span><span>First product: First 90 Nights</span><span>Status: Draft for client review</span><span>2026-09-30</span></div>
+  </div>
+</header>
+
+<main>
+  <!-- LOGO -->
+  <section class="section tight">
+    <div class="container">
+      <div class="bb-label"><h2>Logo</h2><span>01 / Mark</span></div>
+      <div class="logo-tiles">
+        <div class="logo-tile" style="background:var(--moonlight);border:1px solid var(--line);color:var(--night-ink)">
+          <div class="lockup">
+            <svg class="emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" aria-hidden="true"><path d="M3.13 14.2A13 13 0 0 1 28.87 14.2"/><path d="M28.87 17.8A13 13 0 0 1 3.13 17.8"/><path d="M14.55 10.03A6.6 6.6 0 1 0 21.64 18.07A5.4 5.4 0 0 1 14.55 10.03Z" stroke-linejoin="round"/></svg>
+            <div class="wm">Quiet Hours</div>
+            <div class="ds">Pediatric Sleep · Dr. Lena Park</div>
+          </div>
+          <span class="cap">Primary lockup</span>
+        </div>
+        <div class="logo-tile" style="background:var(--night-ink);color:var(--moonlight)">
+          <div class="lockup">
+            <svg class="emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" aria-hidden="true"><path d="M3.13 14.2A13 13 0 0 1 28.87 14.2"/><path d="M28.87 17.8A13 13 0 0 1 3.13 17.8"/><path d="M14.55 10.03A6.6 6.6 0 1 0 21.64 18.07A5.4 5.4 0 0 1 14.55 10.03Z" stroke-linejoin="round"/></svg>
+            <div class="wm" style="font-size:2rem">Quiet Hours</div>
+          </div>
+          <span class="cap">Reversed</span>
+        </div>
+        <div class="logo-tile" style="background:var(--lamplight-deep);color:#fff">
+          <svg viewBox="0 0 32 32" width="88" height="88" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" aria-hidden="true"><path d="M3.13 14.2A13 13 0 0 1 28.87 14.2"/><path d="M28.87 17.8A13 13 0 0 1 3.13 17.8"/><path d="M14.55 10.03A6.6 6.6 0 1 0 21.64 18.07A5.4 5.4 0 0 1 14.55 10.03Z" stroke-linejoin="round"/></svg>
+          <span class="cap">Emblem · the nightlight</span>
+        </div>
+      </div>
+      <div class="grid cols-2" style="margin-top:1rem">
+        <figure class="frame ratio-169" style="margin:0"><img src="../../assets/web/logo-concept.jpg" alt="Generated logo concept: Quiet Hours wordmark with crescent emblem" style="object-position:50% 48%"></figure>
+        <div class="card stack-s">
+          <span class="eyebrow">Construction</span>
+          <p>The emblem is a thin crescent inside an open circle, a nightlight left on in a dark room. The circle opens at both sides, so the mark feels like a hush rather than a badge.</p>
+          <p class="caption">Left: the AI-generated concept from Higgsfield. Top: the vector redraw used in production. Minimum size for the emblem is 20px. Clear space equals the height of the crescent on every side.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLOR -->
+  <section class="section tight alt">
+    <div class="container">
+      <div class="bb-label"><h2>Color</h2><span>02 / Evening palette</span></div>
+      <div class="swatches">
+        <div class="sw"><div class="swatch" style="background:#1E2638;color:#F7F2EA">Aa 13.6:1</div><div class="info"><b>Night Ink</b><code>#1E2638</code><br>Text, dark sections, wordmark</div></div>
+        <div class="sw"><div class="swatch" style="background:#F7F2EA;color:#1E2638;border-bottom:1px solid var(--hairline)">Aa 13.6:1</div><div class="info"><b>Moonlight</b><code>#F7F2EA</code><br>Page background</div></div>
+        <div class="sw"><div class="swatch" style="background:#EDE4D6;color:#1E2638">Aa 12.0:1</div><div class="info"><b>Linen</b><code>#EDE4D6</code><br>Alternate sections, cards</div></div>
+        <div class="sw"><div class="swatch" style="background:#3E4C66;color:#F7F2EA">Aa 7.8:1</div><div class="info"><b>Dusk</b><code>#3E4C66</code><br>Secondary dark, dividers</div></div>
+        <div class="sw"><div class="swatch" style="background:#D9965F;color:#1E2638">Aa 6.1:1</div><div class="info"><b>Lamplight</b><code>#D9965F</code><br>Glow accent, emblem, eyebrows on dark</div></div>
+        <div class="sw"><div class="swatch" style="background:#A9622F;color:#fff">Aa 4.7:1</div><div class="info"><b>Lamplight Deep</b><code>#A9622F</code><br>Primary buttons, white text</div></div>
+        <div class="sw"><div class="swatch" style="background:#8C9B86;color:#1E2638">Aa 5.1:1</div><div class="info"><b>Sage</b><code>#8C9B86</code><br>Calm accents, tags, icons</div></div>
+        <div class="sw"><div class="swatch" style="background:#5F6F5B;color:#F7F2EA">Aa 4.8:1</div><div class="info"><b>Sage Deep</b><code>#5F6F5B</code><br>Eyebrows and labels on light</div></div>
+      </div>
+      <div class="ratio-bar" aria-label="Color proportion">
+        <div style="flex:46;background:#F7F2EA;color:#1E2638">MOONLIGHT 46%</div>
+        <div style="flex:24;background:#1E2638;color:#F7F2EA">INK 24%</div>
+        <div style="flex:16;background:#EDE4D6;color:#1E2638">LINEN 16%</div>
+        <div style="flex:8;background:#8C9B86;color:#1E2638">SAGE</div>
+        <div style="flex:6;background:#D9965F;color:#1E2638"></div>
+      </div>
+      <p class="caption" style="margin-top:.75rem">Lamplight is the only warm color. Use it like a lamp in a dark room: one per view, never a wash. All ratios are WCAG 2.1 contrast for the sample text shown.</p>
+    </div>
+  </section>
+
+  <!-- TYPE -->
+  <section class="section tight">
+    <div class="container">
+      <div class="bb-label"><h2>Typography</h2><span>03 / Fraunces + DM Sans</span></div>
+      <div class="specimen" style="margin-bottom:1.5rem">
+        <div class="card"><div class="big serif" style="font-weight:350">Aa</div><b>Fraunces</b><p class="caption" style="margin-top:.35rem">Display serif · 300 to 500 · Soft 50. Warm and editorial, like a midwife's handwriting set in type.</p></div>
+        <div class="card"><div class="big" style="font-family:var(--f-body);font-weight:500">Aa</div><b>DM Sans</b><p class="caption" style="margin-top:.35rem">Body sans · 400, 500, 600. Very readable at small sizes on a dim phone screen.</p></div>
+      </div>
+      <div class="type-row"><div class="spec"><b>Display XL</b>Fraunces 350 · 72/76</div><div class="t-xl">Let's make tonight smaller.</div></div>
+      <div class="type-row"><div class="spec"><b>Display L</b>Fraunces 350 · 56/60</div><div class="t-l">Rhythm, not schedule.</div></div>
+      <div class="type-row"><div class="spec"><b>Display M</b>Fraunces 400 · 40/46</div><div class="t-m">Fewer decisions after dark.</div></div>
+      <div class="type-row"><div class="spec"><b>Display S</b>Fraunces 400 italic · 28/35</div><div class="t-s"><em>Good enough is the goal at 3 a.m.</em></div></div>
+      <div class="type-row"><div class="spec"><b>Lead</b>DM Sans 400 · 22/34</div><p class="lead">You are not doing it wrong. You are doing something hard, in the dark, without a plan. Let's give you one.</p></div>
+      <div class="type-row"><div class="spec"><b>Body</b>DM Sans 400 · 18/30 · min on mobile</div><p>A rhythm is the order things happen in. You can always do the order, even on a terrible day. Newborns do not read clocks, so we don't ask them to.</p></div>
+      <div class="type-row" style="border-bottom:0"><div class="spec"><b>Eyebrow</b>DM Sans 600 · 13 · +16% caps</div><span class="eyebrow">The Quiet Hours Foundations</span></div>
+    </div>
+  </section>
+
+  <!-- COMPONENTS -->
+  <section class="section tight alt">
+    <div class="container">
+      <div class="bb-label"><h2>Components</h2><span>04 / Buttons, cards, inputs</span></div>
+      <div class="comp-grid">
+        <div class="comp"><span class="cap">Primary button</span><a class="btn btn-primary" href="#">Join the waitlist <span class="arrow">→</span></a><p class="caption">Lamplight Deep, white text, 56px tall, pill. One per screen.</p></div>
+        <div class="comp"><span class="cap">Secondary button</span><a class="btn btn-secondary" href="#">See what's inside</a><p class="caption">Ink outline at 28%. For the quieter second choice.</p></div>
+        <div class="comp" style="background:var(--night-ink);border-color:var(--night-ink)"><span class="cap" style="color:var(--mist)">On dark</span><a class="btn btn-light" href="#">Get the guide</a><p class="caption" style="color:var(--mist)">Moonlight fill on Night Ink sections.</p></div>
+        <div class="comp"><span class="cap">Input</span><div class="field"><label for="bbe">Your email</label><input id="bbe" class="input" type="email" placeholder="you@example.com"></div><p class="caption">17px text so iOS never zooms. Lamplight focus glow.</p></div>
+        <div class="card" style="background:var(--moonlight)"><div class="card-num">01</div><h3>Rhythm</h3><p class="promise">The same order, every evening.</p><p>Foundation card: number in Lamplight Deep, title in Fraunces, a promise line in italic.</p></div>
+        <div class="quote"><span class="mark" aria-hidden="true">“</span><blockquote>Calm is contagious. Her calm became my calm.</blockquote><cite><b>Sofia</b> · mom of a 3-month-old</cite></div>
+      </div>
+      <div style="margin-top:2rem">
+        <span class="cap" style="font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--text-2)">Spacing scale · 4px base</span>
+        <div class="space-scale" style="margin-top:1rem">
+          <div><i style="width:4px;height:4px"></i>4</div><div><i style="width:8px;height:8px"></i>8</div><div><i style="width:12px;height:12px"></i>12</div><div><i style="width:16px;height:16px"></i>16</div><div><i style="width:24px;height:24px"></i>24</div><div><i style="width:32px;height:32px"></i>32</div><div><i style="width:48px;height:48px"></i>48</div><div><i style="width:64px;height:64px"></i>64</div><div><i style="width:96px;height:96px"></i>96</div><div><i style="width:128px;height:128px"></i>128</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGERY -->
+  <section class="section tight">
+    <div class="container">
+      <div class="bb-label"><h2>Photography</h2><span>05 / Dusk and lamplight</span></div>
+      <div class="img-grid">
+        <figure class="wide"><div class="frame" style="aspect-ratio:auto;height:100%;min-height:18rem"><img src="../../assets/web/hero.jpg" alt="Mother holding sleeping newborn in a dim nursery at blue hour" style="object-position:70% 50%"></div></figure>
+        <figure><div class="frame ratio-45"><img src="../../assets/web/ad-bg-a-nursery-nightlight.jpg" alt="Empty crib and warm nightlight in a dark blue nursery"></div><figcaption>A · Nightlight</figcaption></figure>
+        <figure><div class="frame ratio-45"><img src="../../assets/web/ad-bg-b-hand-sleep-sack.jpg" alt="Parent's hand on baby sleeping on back in a sage sleep sack"></div><figcaption>B · Hand on heart</figcaption></figure>
+        <figure><div class="frame ratio-45"><img src="../../assets/web/ad-bg-c-dad-dawn-coffee.jpg" alt="Tired father with coffee at dawn"></div><figcaption>C · Dawn shift</figcaption></figure>
+        <figure><div class="frame ratio-45"><img src="../../assets/web/ad-bg-d-flatlay-routine.jpg" alt="Sleep sack, swaddle, and notebook with evening routine"></div><figcaption>D · The evening order</figcaption></figure>
+        <figure><div class="frame ratio-45"><img src="../../assets/web/ad-bg-e-window-blue-hour.jpg" alt="Nursery window at blue hour with crescent moon"></div><figcaption>E · Blue hour</figcaption></figure>
+        <figure><div class="frame ratio-45"><img src="../../assets/web/lead-magnet-cover.jpg" alt="The Evening Rhythm Guide printed booklet"></div><figcaption>Lead magnet cover</figcaption></figure>
+        <figure><div class="frame ratio-45"><img src="../../assets/web/portrait-lena.jpg" alt="Dr. Lena Park portrait in a lamplit study" style="object-position:50% 30%"></div><figcaption>Portrait · Dr. Lena Park</figcaption></figure>
+        <div class="stack-s photo-rules">
+          <div class="note-card"><b>Real, not glossy.</b><p class="caption" style="margin-top:.25rem">35mm grain, natural skin, lived-in rooms. Dusk blue and one warm lamp.</p></div>
+          <div class="note-card"><b>Safe-sleep correct.</b><p class="caption" style="margin-top:.25rem">Baby on back, firm flat surface, nothing else in the crib. Every frame.</p></div>
+          <div class="note-card"><b>Room for words.</b><p class="caption" style="margin-top:.25rem">Ad frames keep the top third quiet for a headline.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOICE -->
+  <section class="section tight alt">
+    <div class="container">
+      <div class="bb-label"><h2>Voice</h2><span>06 / Calm, clinical, warm</span></div>
+      <div class="voice">
+        <div class="say"><h3>We say</h3><ul><li>Let's make tonight smaller.</li><li>Rhythm, not schedule.</li><li>Fewer decisions after dark.</li><li>You are not doing it wrong.</li><li>Your baby is not a problem to solve.</li><li>One small change at a time.</li></ul></div>
+        <div class="dont"><h3>We never say</h3><ul><li>Sleep hack</li><li>Sleep training boot camp</li><li>Guaranteed to sleep through the night</li><li>Fix your baby</li><li>Science-backed, proven</li><li>Only 3 spots left! Timer ends in 04:59</li></ul></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="logo"><svg class="emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M3.13 14.2A13 13 0 0 1 28.87 14.2"/><path d="M28.87 17.8A13 13 0 0 1 3.13 17.8"/><path d="M14.55 10.03A6.6 6.6 0 1 0 21.64 18.07A5.4 5.4 0 0 1 14.55 10.03Z" stroke-linejoin="round"/></svg><span class="wm">Quiet Hours</span></div>
+      <span class="caption">Tokens: assets/quiet-hours.tokens.json · v1.0.0</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

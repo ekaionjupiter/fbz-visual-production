@@ -1,0 +1,143 @@
+{
+  "$description": "Quiet Hours brand system. Single source of truth for every page, email, and ad. Generated for Dr. Lena Park (fictional POC client). Contrast ratios are WCAG 2.1 against the stated background.",
+  "$version": "1.0.0",
+  "brand": {
+    "name": "Quiet Hours",
+    "descriptor": "Pediatric Sleep with Dr. Lena Park",
+    "feeling": ["calm", "capable", "accompanied"],
+    "principles": [
+      "A dim room where someone calm already has the kettle on.",
+      "Fewer decisions on the page, just like after dark.",
+      "Read one-handed, on a phone, at 3 a.m.",
+      "No primary colors, no cartoon moons, no countdown timers."
+    ]
+  },
+  "color": {
+    "core": {
+      "night-ink":     { "value": "#1E2638", "use": "Primary text, dark sections, logo wordmark" },
+      "dusk":          { "value": "#3E4C66", "use": "Secondary text, dark surfaces, dividers on dark" },
+      "moonlight":     { "value": "#F7F2EA", "use": "Page background" },
+      "linen":         { "value": "#EDE4D6", "use": "Alternate section background, cards on moonlight" },
+      "sage":          { "value": "#8C9B86", "use": "Calm accents, icons, tags" },
+      "sage-deep":     { "value": "#5F6F5B", "use": "Eyebrows and small labels on light (4.82:1 on moonlight)" },
+      "lamplight":     { "value": "#D9965F", "use": "Warm glow accent, emblem, eyebrows on dark (6.10:1 on night-ink)" },
+      "lamplight-deep":{ "value": "#A9622F", "use": "Primary button fill with white text (4.69:1)" },
+      "lamplight-ink": { "value": "#9A5428", "use": "Small accent text and links on light; button hover (5.72:1 with white)" }
+    },
+    "support": {
+      "white":       { "value": "#FFFFFF" },
+      "muted":       { "value": "#5B6478", "use": "Body secondary on moonlight (5.32:1)" },
+      "mist":        { "value": "#B9C2D3", "use": "Body secondary on night-ink (8.43:1)" },
+      "night-ink-2": { "value": "#2A3449", "use": "Raised card on dark sections" },
+      "hairline":    { "value": "#DDD3C3", "use": "1px borders on light" },
+      "hairline-dark": { "value": "#38445C", "use": "1px borders on dark" }
+    },
+    "semantic": {
+      "bg":            "{color.core.moonlight}",
+      "bg-alt":        "{color.core.linen}",
+      "bg-inverse":    "{color.core.night-ink}",
+      "text":          "{color.core.night-ink}",
+      "text-secondary":"{color.support.muted}",
+      "text-inverse":  "{color.core.moonlight}",
+      "accent":        "{color.core.lamplight}",
+      "action":        "{color.core.lamplight-deep}",
+      "action-hover":  "{color.core.lamplight-ink}"
+    },
+    "dark-mode": {
+      "bg":             "#161C2A",
+      "bg-alt":         "#1E2638",
+      "text":           "#F2ECE2",
+      "text-secondary": "#B9C2D3",
+      "card":           "#232C40",
+      "hairline":       "#33405A",
+      "note": "Night readers: pages honor prefers-color-scheme. Accent and buttons are unchanged."
+    }
+  },
+  "typography": {
+    "family": {
+      "display": { "value": "'Fraunces', 'Iowan Old Style', Georgia, serif", "weights": [300, 400, 500], "note": "Optical size on, SOFT 50, WONK 0" },
+      "body":    { "value": "'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif", "weights": [400, 500, 600] }
+    },
+    "scale": {
+      "$note": "Mobile first. Fluid between 375px and 1280px viewports via clamp().",
+      "display-xl": { "size": "clamp(2.5rem, 1.6rem + 3.8vw, 4.5rem)", "line": 1.05, "tracking": "-0.02em", "family": "display", "weight": 350 },
+      "display-l":  { "size": "clamp(2.125rem, 1.5rem + 2.6vw, 3.5rem)", "line": 1.08, "tracking": "-0.015em", "family": "display", "weight": 350 },
+      "display-m":  { "size": "clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem)", "line": 1.15, "tracking": "-0.01em", "family": "display", "weight": 400 },
+      "display-s":  { "size": "clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem)", "line": 1.25, "tracking": "-0.005em", "family": "display", "weight": 400 },
+      "lead":       { "size": "clamp(1.1875rem, 1.1rem + 0.4vw, 1.375rem)", "line": 1.55, "family": "body", "weight": 400 },
+      "body":       { "size": "1.125rem", "line": 1.65, "family": "body", "weight": 400, "note": "18px minimum on mobile" },
+      "body-s":     { "size": "1rem", "line": 1.6, "family": "body", "weight": 400 },
+      "eyebrow":    { "size": "0.8125rem", "line": 1.3, "tracking": "0.16em", "case": "uppercase", "family": "body", "weight": 600 },
+      "caption":    { "size": "0.875rem", "line": 1.5, "family": "body", "weight": 400 }
+    },
+    "measure": { "prose": "36rem", "narrow": "28rem", "wide": "46rem" }
+  },
+  "space": {
+    "$note": "4px base. Section padding is fluid.",
+    "1": "0.25rem", "2": "0.5rem", "3": "0.75rem", "4": "1rem", "5": "1.25rem", "6": "1.5rem",
+    "8": "2rem", "10": "2.5rem", "12": "3rem", "16": "4rem", "20": "5rem", "24": "6rem", "32": "8rem",
+    "gutter": "clamp(1.25rem, 0.9rem + 1.5vw, 2.5rem)",
+    "section": "clamp(4.5rem, 3rem + 6vw, 8.5rem)",
+    "stack": "clamp(1.25rem, 1rem + 1vw, 2rem)"
+  },
+  "layout": {
+    "container": "72rem",
+    "container-narrow": "44rem",
+    "grid-columns": 12,
+    "breakpoints": { "sm": "40rem", "md": "48rem", "lg": "64rem", "xl": "80rem" }
+  },
+  "radius": { "xs": "4px", "s": "8px", "m": "14px", "l": "22px", "xl": "32px", "pill": "999px" },
+  "shadow": {
+    "soft":  "0 1px 2px rgba(30,38,56,0.06), 0 8px 24px -8px rgba(30,38,56,0.12)",
+    "lift":  "0 2px 4px rgba(30,38,56,0.06), 0 24px 48px -16px rgba(30,38,56,0.22)",
+    "glow":  "0 0 0 6px rgba(217,150,95,0.18)"
+  },
+  "motion": {
+    "ease": "cubic-bezier(.2,.7,.2,1)",
+    "duration": { "fast": "160ms", "base": "260ms", "slow": "520ms" },
+    "rule": "Fades only. No bounce, no shake, no urgency animation. Respect prefers-reduced-motion."
+  },
+  "component": {
+    "button": {
+      "primary": {
+        "bg": "{color.core.lamplight-deep}", "text": "#FFFFFF", "hover-bg": "{color.core.lamplight-ink}",
+        "font": "body 600, 1.0625rem, tracking 0.01em", "height": "3.5rem (56px, thumb-friendly)",
+        "padding-x": "1.75rem", "radius": "{radius.pill}", "focus": "{shadow.glow} + 2px night-ink outline offset 3px",
+        "width-mobile": "100%", "contrast": "4.69:1"
+      },
+      "secondary": {
+        "bg": "transparent", "text": "{color.core.night-ink}", "border": "1.5px solid night-ink at 25%",
+        "hover-border": "{color.core.night-ink}", "height": "3.5rem", "radius": "{radius.pill}"
+      },
+      "on-dark": {
+        "bg": "{color.core.moonlight}", "text": "{color.core.night-ink}", "hover-bg": "#FFFFFF", "contrast": "13.56:1"
+      },
+      "text-link": { "text": "{color.core.lamplight-ink}", "underline": "1px, offset 4px" }
+    },
+    "card": {
+      "default": { "bg": "#FFFFFF at 55% over linen, or linen over moonlight", "border": "1px {color.support.hairline}", "radius": "{radius.l}", "padding": "clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem)", "shadow": "none" },
+      "foundation": { "bg": "{color.core.moonlight}", "border": "1px hairline", "radius": "{radius.l}", "number": "display-m in lamplight-deep", "eyebrow": "sage-deep" },
+      "testimonial": { "bg": "{color.core.linen}", "radius": "{radius.l}", "quote": "display-s, Fraunces italic 400", "attribution": "eyebrow, muted" },
+      "dark": { "bg": "{color.support.night-ink-2}", "border": "1px {color.support.hairline-dark}", "text": "{color.core.moonlight}", "radius": "{radius.l}" },
+      "price": { "bg": "#FFFFFF", "border": "1px hairline", "radius": "{radius.xl}", "shadow": "{shadow.lift}" }
+    },
+    "input": {
+      "height": "3.5rem", "bg": "#FFFFFF", "border": "1.5px solid {color.support.hairline}", "radius": "{radius.m}",
+      "focus-border": "{color.core.lamplight-deep}", "label": "body-s 500 night-ink", "font-size": "1.0625rem (prevents iOS zoom)"
+    },
+    "emblem": { "description": "Thin line crescent nested in an open circle (a nightlight). Stroke 1.5px at 32px.", "color": "{color.core.lamplight}" }
+  },
+  "imagery": {
+    "style": "35mm film, Portra-like grain, dusk and lamplight, real and unposed. Safe-sleep correct in every frame: baby on back, firm flat surface, nothing else in the crib.",
+    "assets": {
+      "logo": "logo-concept.png",
+      "hero": "hero.png",
+      "lead-magnet-cover": "lead-magnet-cover.png",
+      "ad-a": "ad-bg-a-nursery-nightlight.png",
+      "ad-b": "ad-bg-b-hand-sleep-sack.png",
+      "ad-c": "ad-bg-c-dad-dawn-coffee.png",
+      "ad-d": "ad-bg-d-flatlay-routine.png",
+      "ad-e": "ad-bg-e-window-blue-hour.png"
+    }
+  }
+}

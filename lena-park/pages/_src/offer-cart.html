@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>First 90 Nights Checkout</title>
+<meta name="description" content="Join First 90 Nights, the five Quiet Hours Foundations in short lessons you can watch during a feed.">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..500,0..100,0;1,9..144,300..500,0..100,0&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="quiet-hours.css">
+<style>
+  .co-head{border-bottom:1px solid var(--line)}
+  .co-head .container{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-block:1rem}
+  .secure{white-space:nowrap;display:flex;align-items:center;gap:.5rem;font-size:var(--t-caption);color:var(--text-2)}
+  .checkout{display:grid;gap:clamp(1.5rem,1rem + 2vw,2.5rem);grid-template-areas:"intro" "order" "inside" "credit" "refund" "proof";padding-block:clamp(2rem,1.5rem + 3vw,4rem) var(--section)}
+  @media(min-width:64rem){
+    .checkout{grid-template-columns:1fr 26.5rem;grid-template-areas:"intro order" "inside order" "credit order" "refund order" "proof order";column-gap:clamp(2.5rem,1rem + 4vw,5rem);align-items:start}
+    .order{position:sticky;top:1.5rem}
+  }
+  .a-intro{grid-area:intro}.a-order{grid-area:order}.a-inside{grid-area:inside}.a-credit{grid-area:credit}.a-refund{grid-area:refund}.a-proof{grid-area:proof}
+  .co-title{font-size:var(--t-l);line-height:1.06;letter-spacing:-.015em}
+  .product{display:grid;grid-template-columns:5.5rem 1fr;gap:1.25rem;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--r-l);padding:1rem}
+  .product .thumb{border-radius:var(--r-m);overflow:hidden;aspect-ratio:1}
+  .product .thumb img{width:100%;height:100%;object-fit:cover}
+  .product b{font-family:var(--f-display);font-weight:400;font-size:1.375rem;display:block}
+  .order{background:#fff;color:var(--night-ink);border-radius:var(--r-xl);box-shadow:var(--shadow-lift);overflow:hidden;--text:var(--night-ink);--text-2:var(--muted);--line:var(--hairline);--eyebrow:var(--sage-deep);--card:#FBF8F3}
+  .order-top{background:var(--night-ink);color:var(--moonlight);padding:1.5rem 1.75rem}
+  .order-top .eyebrow{color:var(--lamplight)}
+  .order-top .price .now{color:var(--moonlight)}
+  .order-top .price .was{color:var(--mist)}
+  .order-top .price .note{color:var(--mist)}
+  .order-body{padding:1.5rem 1.75rem 1.75rem}
+  .order fieldset{border:0;padding:0;margin:0;display:grid;gap:.85rem}
+  .order legend{font-family:var(--f-display);font-size:1.25rem;margin-bottom:.85rem;padding:0}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;align-items:end}
+  @media(max-width:30rem){.refund{grid-template-columns:1fr}.row2.stack-sm{grid-template-columns:1fr}.co-head .wm small{display:none}.product{grid-template-columns:4.5rem 1fr}}
+  .order fieldset+fieldset{margin-top:.75rem}
+  .order .btn{font-size:1rem;padding-inline:1.25rem}
+  .card-input{position:relative}
+  .card-input svg{position:absolute;right:1rem;top:50%;transform:translateY(-50%);color:var(--muted)}
+  .hint{font-size:.8125rem;color:var(--muted);margin-top:.35rem;font-weight:400}
+  .agree{display:grid;grid-template-columns:1.25rem 1fr;gap:.75rem;align-items:start;font-size:.9375rem;line-height:1.45}
+  .agree input{width:1.25rem;height:1.25rem;margin:.1rem 0 0;accent-color:var(--lamplight-deep)}
+  .total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--hairline);padding-top:1rem;font-weight:600}
+  .total span:last-child{font-family:var(--f-display);font-weight:400;font-size:1.5rem}
+  .mini-trust{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;font-size:.8125rem;color:var(--muted)}
+  .credit{background:var(--bg-alt);border-radius:var(--r-l);padding:clamp(1.5rem,1.2rem + 1vw,2rem);display:grid;gap:.75rem}
+  .refund{display:grid;grid-template-columns:auto 1fr;gap:1.25rem;align-items:start;border:1px solid var(--line);border-radius:var(--r-l);padding:clamp(1.5rem,1.2rem + 1vw,2rem)}
+  .seal{width:4.5rem;height:4.5rem;border-radius:50%;border:1px solid var(--lamplight);display:grid;place-items:center;text-align:center;font-family:var(--f-display);color:var(--lamplight-ink);line-height:1}
+  .seal b{font-size:1.75rem;font-weight:400;display:block}
+  .seal small{font-family:var(--f-body);font-size:.5625rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+  .proof{display:grid;gap:.85rem}
+  .proof .quote blockquote{font-size:1.25rem}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="qh" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3.13 14.2A13 13 0 0 1 28.87 14.2"/><path d="M28.87 17.8A13 13 0 0 1 3.13 17.8"/><path d="M14.55 10.03A6.6 6.6 0 1 0 21.64 18.07A5.4 5.4 0 0 1 14.55 10.03Z"/></g></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></g></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h3"/></g></symbol>
+</svg>
+
+<header class="co-head">
+  <div class="container">
+    <a class="logo" href="#"><svg class="emblem"><use href="#qh"/></svg><span class="wm">Quiet Hours<small>Pediatric Sleep · Dr. Lena Park</small></span></a>
+    <span class="secure"><svg width="16" height="16"><use href="#i-lock"/></svg>Secure checkout</span>
+  </div>
+</header>
+
+<main class="container checkout">
+  <section class="a-intro stack">
+    <span class="eyebrow">Waitlist founding price</span>
+    <h1 class="co-title">You're one step from a calmer evening.</h1>
+    <p class="lead">First 90 Nights: the five Quiet Hours Foundations, in short lessons you can watch during a feed.</p>
+    <div class="product">
+      <div class="thumb"><img src="../../assets/web/ad-bg-d-flatlay-routine.jpg" alt="" style="object-position:60% 75%"></div>
+      <div><b>First 90 Nights</b><p class="body-s muted">A self-paced video mini-course for first-time parents, from the third trimester through about 4 months.</p></div>
+    </div>
+    <p class="muted">You'll build a simple evening rhythm, set up the sleep space, learn a calm way to respond at night, share the load with a Night Relay, and look after your own rest. Fewer decisions after dark. One small change at a time.</p>
+  </section>
+
+  <aside class="a-order order" aria-label="Order">
+    <div class="order-top stack-s">
+      <span class="eyebrow">Waitlist founding price</span>
+      <div class="price"><span class="now">$97</span><span class="was">$147</span><span class="note">Open to waitlist members through Sunday, November 8, at 11:59 p.m. Eastern. After that, First 90 Nights is $147.</span></div>
+    </div>
+    <form class="order-body stack" action="#" onsubmit="return false">
+      <fieldset>
+        <legend>Your details</legend>
+        <div class="row2">
+          <div class="field"><label for="f">First name</label><input class="input" id="f" autocomplete="given-name"></div>
+          <div class="field"><label for="l">Last name</label><input class="input" id="l" autocomplete="family-name"></div>
+        </div>
+        <div class="field"><label for="e">Email address</label><input class="input" id="e" type="email" autocomplete="email"><p class="hint">Your course login will be sent here.</p></div>
+        <div class="field"><label for="b">Your baby's due date or age <span class="muted" style="font-weight:400">(optional)</span></label><input class="input" id="b" placeholder="e.g. due in December, or 6 weeks"><p class="hint">Helps Lena shape the quarterly Answers video.</p></div>
+      </fieldset>
+      <fieldset>
+        <legend>Payment</legend>
+        <div class="field card-input"><label for="cn">Card number</label><div style="position:relative"><input class="input" id="cn" inputmode="numeric" autocomplete="cc-number" placeholder="1234 1234 1234 1234"><svg width="22" height="22" style="position:absolute;right:1rem;top:50%;transform:translateY(-50%);color:var(--muted)"><use href="#i-card"/></svg></div></div>
+        <div class="row2">
+          <div class="field"><label for="ex">Expiry date</label><input class="input" id="ex" autocomplete="cc-exp" placeholder="MM / YY"></div>
+          <div class="field"><label for="cv">Security code</label><input class="input" id="cv" inputmode="numeric" autocomplete="cc-csc" placeholder="123"></div>
+        </div>
+        <div class="row2 stack-sm">
+          <div class="field"><label for="z">Billing ZIP or postal code</label><input class="input" id="z" autocomplete="postal-code"></div>
+          <div class="field"><label for="c">Country</label><input class="input" id="c" autocomplete="country-name" value="United States"></div>
+        </div>
+      </fieldset>
+      <label class="agree"><input type="checkbox" required><span>I understand First 90 Nights is educational and does not replace medical advice from my pediatrician.</span></label>
+      <label class="agree"><input type="checkbox" required><span>I agree to the <a class="link" href="#">Terms</a> and <a class="link" href="#">Privacy Policy</a>.</span></label>
+      <div class="total"><span>Total today</span><span>$97</span></div>
+      <button class="btn btn-primary btn-block" type="submit">Join First 90 Nights for $97</button>
+      <div class="mini-trust"><span>14-day refund, no questions asked</span><span>Lifetime access</span></div>
+      <p class="caption center">Secure, encrypted checkout. Your card details are processed by our payment provider and never stored by Quiet Hours.</p>
+    </form>
+  </aside>
+
+  <section class="a-inside stack">
+    <h2 class="t-m">What's included</h2>
+    <ul class="checks">
+      <li>Start Here orientation</li>
+      <li><span><b>Five modules:</b> Rhythm, Room, Response, Relay, and Recovery</span></li>
+      <li>Short lessons of 5 to 12 minutes, about 2.5 hours in total</li>
+      <li>Printable worksheets, including your Evening Rhythm card and Night Relay plan</li>
+      <li>A recorded quarterly Answers video, based on submitted questions</li>
+      <li>Lifetime access</li>
+    </ul>
+    <p class="caption">Self-paced. No live calls to schedule. No community to keep up with.</p>
+  </section>
+
+  <section class="a-credit credit">
+    <span class="eyebrow">Thinking about 1:1 support too?</span>
+    <h2 class="t-s">Start here first.</h2>
+    <p>If you buy First 90 Nights and decide within 60 days that you'd like 1:1 support, the full course price is credited toward a 1:1 package with me. You'll arrive with the foundations already in place, so our time together goes further.</p>
+    <p class="caption">1:1 packages: 3-week support, $650. 6-week support, $1,100. Credit applies when you upgrade within 60 days of your course purchase.</p>
+  </section>
+
+  <section class="a-refund refund">
+    <div class="seal"><div><b>14</b><small>Days</small></div></div>
+    <div class="stack-s">
+      <h2 class="t-s">14 days, no questions asked</h2>
+      <p class="muted">If First 90 Nights isn't right for you, ask for a full refund within 14 days of purchase. No questions asked, no forms to justify it. Just reply to any course email.</p>
+    </div>
+  </section>
+
+  <section class="a-proof proof">
+    <p class="caption">From families I've worked with 1:1. Shared with permission.</p>
+    <figure class="quote" style="margin:0"><blockquote>For the first time in weeks, my husband and I had the same plan at 2 a.m.</blockquote><cite><b>Priya</b> · mom of a 10-week-old</cite></figure>
+    <figure class="quote" style="margin:0"><blockquote>We didn't do anything dramatic. We just did small things, in order, every night.</blockquote><cite><b>Jen</b> · mom of a 12-week-old</cite></figure>
+    <figure class="quote" style="margin:0"><blockquote>Lena never made me feel like I'd broken something. She just made the evening make sense.</blockquote><cite><b>Hannah</b> · mom of a 4-month-old</cite></figure>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p class="disclaimer" style="color:var(--mist)">Quiet Hours and First 90 Nights are educational and do not replace medical advice. Dr. Lena Park holds a PhD in developmental psychology and is a certified pediatric sleep consultant; she is not a medical doctor. For questions about your baby's health, feeding, breathing, or safe sleep, talk to your pediatrician and follow current AAP guidance.</p>
+    <p class="caption" style="color:var(--mist)">© 2026 Quiet Hours · @quiethours.sleep · <a href="#">Terms</a> · <a href="#">Privacy</a></p>
+  </div>
+</footer>
+</body>
+</html>

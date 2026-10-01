@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Evening Rhythm Guide</title>
+<meta name="description" content="A calm, printable plan for your baby's evenings and nights, from Dr. Lena Park.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..500,0..100,0;1,9..144,300..500,0..100,0&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="quiet-hours.css">
+<style>
+  body{background:var(--linen)}
+  .toolbar{position:sticky;top:0;z-index:10;background:rgba(237,228,214,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--hairline)}
+  .toolbar .container{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-block:.75rem}
+  .sheets{display:grid;gap:clamp(1.25rem,1rem + 2vw,2.5rem);justify-items:center;padding:clamp(1.25rem,1rem + 2vw,3rem) var(--gutter) clamp(3rem,2rem + 4vw,5rem)}
+  .sheet{width:100%;max-width:51rem;background:#FFFDF9;color:var(--night-ink);border-radius:6px;box-shadow:0 1px 2px rgba(30,38,56,.08),0 20px 50px -20px rgba(30,38,56,.28);padding:clamp(1.75rem,1.2rem + 3vw,4rem);position:relative;display:flex;flex-direction:column}
+  @media(min-width:48rem){.sheet{aspect-ratio:8.5/11}}
+  .sheet-head{display:flex;justify-content:space-between;align-items:center;font-size:.6875rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--muted);padding-bottom:1rem;border-bottom:1px solid var(--hairline);margin-bottom:clamp(1.5rem,1rem + 2vw,2.5rem)}
+  .sheet-head span{white-space:nowrap}.sheet-head span:first-child{display:flex;align-items:center;gap:.5rem;color:var(--night-ink)}
+  .sheet-head svg{width:18px;height:18px;color:var(--lamplight)}
+  .sheet-foot{margin-top:auto;padding-top:1.25rem;border-top:1px solid var(--hairline);display:flex;justify-content:space-between;gap:1rem;font-family:var(--f-display);font-style:italic;color:var(--lamplight-ink);font-size:1.0625rem}
+  .sheet-foot small{white-space:nowrap;font-family:var(--f-body);font-style:normal;color:var(--muted);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;align-self:center}
+  .sheet h2{font-size:clamp(2rem,1.5rem + 2vw,3rem);line-height:1.05;letter-spacing:-.015em}
+  .sheet .sub{font-family:var(--f-display);font-style:italic;font-size:clamp(1.125rem,1rem + .5vw,1.375rem);color:var(--dusk);margin-top:.6rem}
+  .sheet p{font-size:1rem;line-height:1.6}
+  /* cover */
+  .cover{padding:0;overflow:hidden;background:#F4EEE3}
+  .cover .top{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:clamp(2.5rem,2rem + 4vw,5rem) clamp(1.75rem,1rem + 4vw,5rem);gap:1.25rem}
+  .cover .brand{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;font-weight:600}
+  .cover svg.moon{width:72px;height:72px;color:var(--lamplight)}
+  .cover h1{font-size:clamp(2.75rem,2rem + 4vw,5.25rem);line-height:1;letter-spacing:-.02em;font-weight:350}
+  .cover .subtitle{font-family:var(--f-display);font-size:clamp(1.125rem,1rem + .6vw,1.5rem);line-height:1.4;max-width:28rem;color:var(--dusk)}
+  .cover .small{font-size:.875rem;color:var(--muted)}
+  .cover .band{background:var(--night-ink);color:var(--moonlight);padding:clamp(1.5rem,1rem + 2vw,2.5rem);text-align:center;font-size:.8125rem;letter-spacing:.3em;text-transform:uppercase;font-weight:600}
+  .cover .band span{display:block;font-family:var(--f-display);font-style:italic;letter-spacing:0;text-transform:none;font-weight:300;font-size:1.0625rem;color:var(--mist);margin-top:.5rem}
+  /* note */
+  .note p{font-family:var(--f-display);font-size:clamp(1.125rem,1.05rem + .4vw,1.3125rem);line-height:1.6;font-weight:350}
+  .note p+p{margin-top:1em}
+  .note .sig{font-family:var(--f-display);font-style:italic;font-size:2.25rem;color:var(--lamplight-ink);margin-top:1.5rem}
+  /* rhythm steps */
+  .rhythm{display:grid;gap:.75rem;margin-top:1.5rem}
+  .rstep{display:grid;grid-template-columns:2.5rem 1fr;gap:1rem;padding:.9rem 0;border-top:1px solid var(--hairline)}
+  .rstep .num{width:2.5rem;height:2.5rem;border-radius:50%;background:var(--night-ink);color:var(--moonlight);display:grid;place-items:center;font-family:var(--f-display);font-size:1.125rem}
+  .rstep h3{font-size:1.25rem;font-weight:400}
+  .rstep .why{font-size:.9375rem;color:var(--dusk);margin-top:.15rem}
+  .rstep .ge{font-size:.875rem;margin-top:.4rem;color:var(--sage-deep)}
+  .rstep .ge b{font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.6875rem;margin-right:.35rem}
+  .fill{display:grid;gap:1.5rem;margin-top:1.5rem;background:var(--moonlight);border-radius:var(--r-m);padding:1.25rem 1.5rem}
+  @media(min-width:48rem){.fill{grid-template-columns:1.2fr 1fr}}
+  .fill h4{font-family:var(--f-body);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted);margin-bottom:.6rem}
+  .fill ol,.fill ul{list-style:none;display:grid;gap:.55rem;counter-reset:f}
+  .fill li{display:flex;gap:.6rem;align-items:flex-end;font-size:.875rem;color:var(--muted)}
+  .fill ol li{counter-increment:f}.fill ol li::before{content:counter(f);font-family:var(--f-display);color:var(--lamplight-ink);width:1rem}
+  .fill li i{flex:1;border-bottom:1px solid #CFC5B4;height:1.1rem}
+  /* checklist */
+  .cl-grid{display:grid;gap:1.25rem 2rem;margin-top:1.25rem}
+  @media(min-width:48rem){.cl-grid{grid-template-columns:1fr 1fr}}
+  .cl h3{font-family:var(--f-body);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--sage-deep);margin-bottom:.6rem}
+  .cl ul{list-style:none;display:grid;gap:.55rem}
+  .cl li{display:grid;grid-template-columns:1.1rem 1fr;gap:.65rem;font-size:.9375rem;line-height:1.45}
+  .cl li::before{content:"";width:1.1rem;height:1.1rem;border:1.5px solid var(--dusk);border-radius:4px;margin-top:.15rem}
+  .cl.aap{grid-column:1/-1;background:var(--moonlight);border-radius:var(--r-m);padding:1.1rem 1.25rem;border-left:3px solid var(--sage)}
+  .intro{font-size:.9375rem;color:var(--dusk);margin-top:1rem}
+  /* pause and read */
+  .pr{display:grid;gap:1rem;margin-top:1.5rem}
+  @media(min-width:48rem){.pr{grid-template-columns:repeat(3,1fr)}}
+  .pr div{background:var(--moonlight);border-radius:var(--r-m);padding:1.25rem}
+  .pr b{display:block;font-family:var(--f-display);font-weight:400;font-size:1.5rem;margin-bottom:.4rem}
+  .pr b small{display:block;font-family:var(--f-body);font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;color:var(--lamplight-ink);font-weight:600;margin-bottom:.2rem}
+  .pr p,.pr li{font-size:.9375rem;line-height:1.5}
+  .pr ul{list-style:none;display:grid;gap:.3rem;margin-top:.5rem}
+  .pr li::before{content:"· ";color:var(--lamplight-ink)}
+  .important{margin-top:1.25rem;border:1.5px solid var(--night-ink);border-radius:var(--r-m);padding:1rem 1.25rem;font-size:.9375rem;line-height:1.5}
+  .important b{letter-spacing:.12em;text-transform:uppercase;font-size:.75rem;display:block;margin-bottom:.25rem}
+  .closing{margin-top:1.5rem;background:var(--night-ink);color:var(--moonlight);border-radius:var(--r-m);padding:1.5rem}
+  .closing h3{font-size:1.75rem;font-weight:350}
+  .closing p{color:var(--mist);margin-top:.6rem;font-size:.9375rem}
+  .closing .sig{font-family:var(--f-display);font-style:italic;font-size:1.5rem;color:var(--lamplight);margin-top:.75rem}
+  @media(max-width:30rem){.hide-sm{display:none}}
+  .sheet .legal{font-size:.75rem;line-height:1.5;color:var(--muted);margin-top:1rem}
+  @media print{
+    @page{size:letter;margin:0}
+    body{background:#fff}.toolbar{display:none}
+    .sheets{padding:0;gap:0}
+    .sheet{box-shadow:none;border-radius:0;max-width:none;width:8.5in;height:11in;aspect-ratio:auto;break-after:page;padding:.6in}
+    .cover{padding:0}
+    .sheet:not(.cover){padding:.5in .55in}
+    .sheet-head{margin-bottom:1rem;padding-bottom:.6rem}
+    .sheet h2{font-size:30px}.sheet .sub{font-size:16px;margin-top:.3rem}
+    .intro{font-size:12.5px;margin-top:.5rem}
+    .rhythm{gap:0;margin-top:.6rem}
+    .rstep{padding:.4rem 0;grid-template-columns:2rem 1fr;gap:.75rem}
+    .rstep .num{width:2rem;height:2rem;font-size:.95rem}
+    .rstep h3{font-size:1.05rem}.rstep .why{font-size:.78rem;margin-top:0}.rstep .ge{font-size:.75rem;margin-top:.1rem}
+    .fill{margin-top:.6rem;padding:.7rem 1rem;gap:1rem}.fill ol{gap:.3rem}.fill h4{margin-bottom:.35rem}
+    .pr{gap:.6rem;margin-top:.8rem}.pr div{padding:.85rem}.pr p,.pr li{font-size:.8rem}.pr b{font-size:1.2rem}
+    .important{margin-top:.75rem;font-size:.8rem;padding:.7rem 1rem}
+    .closing{margin-top:.75rem;padding:1rem 1.1rem}.closing p{font-size:.8rem;margin-top:.4rem}.closing h3{font-size:1.35rem}.closing .sig{font-size:1.25rem;margin-top:.4rem}
+    .sheet .legal{font-size:.66rem;margin-top:.6rem}
+    .cl li{font-size:.85rem}.cl-grid{gap:1rem 1.5rem}
+    .sheet-foot{padding-top:.7rem;font-size:.95rem}
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="qh" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3.13 14.2A13 13 0 0 1 28.87 14.2"/><path d="M28.87 17.8A13 13 0 0 1 3.13 17.8"/><path d="M14.55 10.03A6.6 6.6 0 1 0 21.64 18.07A5.4 5.4 0 0 1 14.55 10.03Z"/></g></symbol>
+</svg>
+<div class="toolbar"><div class="container"><a class="logo" href="#"><svg class="emblem"><use href="#qh"/></svg><span class="wm" style="font-size:1.125rem;white-space:nowrap">Evening Rhythm Guide</span></a><button class="btn btn-primary btn-small" style="white-space:nowrap" onclick="window.print()">Print<span class="hide-sm">&nbsp;or save PDF</span></button></div></div>
+
+<main class="sheets">
+  <!-- COVER -->
+  <section class="sheet cover" aria-label="Cover">
+    <div class="top">
+      <div class="brand">Quiet Hours · Pediatric Sleep with Dr. Lena Park</div>
+      <svg class="moon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width=".9" stroke-linecap="round" aria-hidden="true"><path d="M3.13 14.2A13 13 0 0 1 28.87 14.2"/><path d="M28.87 17.8A13 13 0 0 1 3.13 17.8"/><path d="M14.55 10.03A6.6 6.6 0 1 0 21.64 18.07A5.4 5.4 0 0 1 14.55 10.03Z" stroke-linejoin="round"/></svg>
+      <h1>The Evening<br>Rhythm Guide</h1>
+      <p class="subtitle">A calm, printable plan for your baby's evenings and nights. Fewer decisions after dark.</p>
+      <p class="small">For first-time parents, from late pregnancy through the early months.</p>
+    </div>
+    <div class="band">Dr. Lena Park<span>Let's make tonight smaller.</span></div>
+  </section>
+
+  <!-- NOTE -->
+  <section class="sheet note" aria-label="A note from Lena">
+    <div class="sheet-head"><span><svg><use href="#qh"/></svg>Quiet Hours</span><span>A note from Lena</span></div>
+    <div style="max-width:36rem">
+      <p>Hi, I'm Lena.</p>
+      <p>When my first baby was born, I had a PhD in developmental psychology and a dissertation on infant routines. And at 3 a.m., I still had no idea what I was doing.</p>
+      <p>What finally helped was not more research. It was an index card on the fridge with our evening written on it, in order, and a note about who covered which part of the night.</p>
+      <p><em>This guide is that index card, done properly.</em></p>
+      <p>It won't give you a schedule. Newborns don't read clocks. It gives you a rhythm: the order things happen in. You can always do the order, even on a terrible day.</p>
+      <p>Use what helps. Skip what doesn't. And on the hard nights, remember: good enough is the goal at 3 a.m.</p>
+      <p>Let's make tonight smaller.</p>
+      <div class="sig">Lena</div>
+    </div>
+    <div class="sheet-foot"><span>One small change at a time.</span><small>Before you begin</small></div>
+  </section>
+
+  <!-- PAGE 1 -->
+  <section class="sheet" aria-label="Page 1, Your Evening Rhythm">
+    <div class="sheet-head"><span><svg><use href="#qh"/></svg>Quiet Hours</span><span>Page 1</span></div>
+    <h2>Your Evening Rhythm</h2>
+    <p class="sub">Same steps. Same order. Every evening. About 20 to 40 minutes.</p>
+    <p class="intro">The steps matter less than the order. Each step has a “good enough” version for the nights when the full version isn't happening. Those nights count too.</p>
+    <div class="rhythm">
+      <div class="rstep"><span class="num">1</span><div><h3>Bath or wash</h3><p class="why">It marks the line between day and evening.</p><p class="ge"><b>Good enough</b>A warm washcloth over hands and face. Fresh pajamas.</p></div></div>
+      <div class="rstep"><span class="num">2</span><div><h3>Feed</h3><p class="why">A calm, unhurried feed is a natural anchor for the evening.</p><p class="ge"><b>Good enough</b>Feed however works tonight, wherever you are. The order is what counts. (Feeding questions go to your pediatrician or lactation consultant.)</p></div></div>
+      <div class="rstep"><span class="num">3</span><div><h3>Dim the lights</h3><p class="why">Lower light signals the busy part of the day is over, for both of you.</p><p class="ge"><b>Good enough</b>Switch off the big overhead light. One lamp is plenty.</p></div></div>
+      <div class="rstep"><span class="num">4</span><div><h3>One book</h3><p class="why">A short, quiet moment that sounds the same every night.</p><p class="ge"><b>Good enough</b>Say the same few sentences as yesterday. “The day is done. The lights are low. Time to rest.”</p></div></div>
+      <div class="rstep"><span class="num">5</span><div><h3>One song</h3><p class="why">Your voice, repeated, becomes part of the rhythm.</p><p class="ge"><b>Good enough</b>Hum the same tune. No words needed, and you don't need to sing well.</p></div></div>
+      <div class="rstep"><span class="num">6</span><div><h3>Down</h3><p class="why">The rhythm ends in the same place every night.</p><p class="ge"><b>Good enough</b>Down, on their back, in a safe sleep space set up the way current AAP guidance describes (see Page 2).</p></div></div>
+    </div>
+    <div class="fill">
+      <div><h4>Our evening, in order</h4><ol><li><i></i></li><li><i></i></li><li><i></i></li><li><i></i></li><li><i></i></li><li><i></i></li></ol></div>
+      <div><h4>After midnight, who does what</h4><ul><li>First stretch <i></i></li><li>Second stretch <i></i></li></ul></div>
+    </div>
+    <div class="sheet-foot"><span>Rhythm, not schedule.</span><small>Page 1</small></div>
+  </section>
+
+  <!-- PAGE 2 -->
+  <section class="sheet" aria-label="Page 2, The Room Checklist">
+    <div class="sheet-head"><span><svg><use href="#qh"/></svg>Quiet Hours</span><span>Page 2</span></div>
+    <h2>The Room Checklist</h2>
+    <p class="sub">Get the room ready in daylight, before you're exhausted.</p>
+    <p class="intro">This checklist follows safe sleep basics as published by the American Academy of Pediatrics (AAP). Safe sleep guidance is updated over time, so always follow current AAP guidance and ask your pediatrician about anything specific to your baby.</p>
+    <div class="cl-grid">
+      <div class="cl aap"><h3>Sleep surface (from AAP safe sleep guidance)</h3><ul>
+        <li>Baby placed on their back for every sleep, as recommended by the AAP.</li>
+        <li>A firm, flat sleep surface with nothing else in it, as recommended by the AAP.</li>
+        <li>I've checked current AAP safe sleep guidance and asked my pediatrician any questions about our setup.</li></ul></div>
+      <div class="cl"><h3>Temperature</h3><ul>
+        <li>I've asked my pediatrician how to dress my baby for sleep, and I follow current AAP guidance on avoiding overheating.</li>
+        <li>The room feels comfortable to me, not too warm and not too cold.</li></ul></div>
+      <div class="cl"><h3>Light</h3><ul>
+        <li>Evening lights can be dimmed, or one lamp is enough.</li>
+        <li>A small, low light for night feeds and changes, so the big light stays off.</li>
+        <li>Brighter by day, dim by night.</li></ul></div>
+      <div class="cl"><h3>Sound</h3><ul>
+        <li>The evening is a little quieter than the day: TV down, voices low.</li>
+        <li>If we use a sound machine, I've read the manufacturer's instructions and keep the volume low.</li></ul></div>
+      <div class="cl"><h3>Ready before dark</h3><ul>
+        <li>Diapers and wipes within reach.</li>
+        <li>Burp cloths and a spare change of clothes nearby.</li>
+        <li>Water and a snack for me.</li>
+        <li>Phone charger by my chair.</li>
+        <li>This guide on the fridge, where everyone can see it.</li></ul></div>
+    </div>
+    <div class="sheet-foot"><span>For anything about your baby's health, feeding, breathing, or safe sleep, talk to your pediatrician.</span><small>Page 2</small></div>
+  </section>
+
+  <!-- PAGE 3 -->
+  <section class="sheet" aria-label="Page 3, When the night goes sideways">
+    <div class="sheet-head"><span><svg><use href="#qh"/></svg>Quiet Hours</span><span>Page 3</span></div>
+    <h2>When the night goes sideways</h2>
+    <p class="sub">The Pause and Read: three steps for night wakings.</p>
+    <p class="intro">When your baby wakes, it's easy to respond to the panic instead of to your baby. This is not “let them cry.” It's “look before you leap.”</p>
+    <div class="pr">
+      <div><b><small>Step 1</small>Pause</b><p>Take one slow breath before you move. Just one. It gives your own body a second to settle.</p></div>
+      <div><b><small>Step 2</small>Read</b><p>Look at what you're actually seeing.</p><ul><li>Could this be hunger?</li><li>Could this be discomfort? (A wet diaper, too warm, a burp.)</li><li>Could my baby be moving between sleep cycles, stirring and settling?</li></ul></div>
+      <div><b><small>Step 3</small>Respond</b><p>Respond to what you read, not to the worry. Feed if it's hunger. Help with the discomfort. If it looks like a transition, give it a moment and stay close.</p></div>
+    </div>
+    <div class="important"><b>Important</b>If you are ever worried about your baby's breathing, color, or health, trust that worry. Contact your pediatrician or emergency services right away. The Pause and Read is for ordinary night wakings, never for a concern about your baby's health.</div>
+    <div class="closing">
+      <h3>Make tonight smaller.</h3>
+      <p>You don't need to fix the whole month. Just tonight. One step from Page 1, in the same order as yesterday. If the night goes sideways anyway, that's not failure. That's a baby. Good enough is the goal at 3 a.m.</p>
+      <p style="color:var(--moonlight)">You are not doing it wrong.</p>
+      <div class="sig">Lena</div>
+    </div>
+    <p class="legal"><b>Want the full plan?</b> First 90 Nights opens November 4. Waitlist members get the founding price. [DOMAIN]<br>Quiet Hours and First 90 Nights are educational and do not replace medical advice. Dr. Lena Park holds a PhD in developmental psychology and is a certified pediatric sleep consultant; she is not a medical doctor. For questions about your baby's health, feeding, breathing, or safe sleep, talk to your pediatrician and follow current AAP guidance. © 2026 Quiet Hours · @quiethours.sleep</p>
+  </section>
+</main>
+</body>
+</html>
