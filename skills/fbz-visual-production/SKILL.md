@@ -5,7 +5,7 @@ description: Use for ANY request to generate, composite, upgrade, re-grade or QA
 
 # FBZ Visual Production
 
-The bar: every shipped asset must look like it was built by a designer in Photoshop, layered and lit, not generated in one pass. Reference tiles: the Leonel Salas Figma (file `UVmXkMR8Qc57lPf6kJ3WE7`, node `7:233`, email headers + sales page). Full doctrine with sources: `doctrine/FBZ_Visual_Production_Doctrine.md`. Do not ask Kai questions about image quality; this skill already answers them.
+The bar: every shipped asset must look like it was built by a designer in Photoshop, layered and lit, not generated in one pass. Reference tiles: the Leonel Salas Figma (file `UVmXkMR8Qc57lPf6kJ3WE7`, node `7:233`, email headers + sales page). Full doctrine with sources: `doctrine/Visual_Production_Doctrine.md`. Do not ask Kai questions about image quality; this skill already answers them.
 
 ## Hard rules (non-negotiable)
 

@@ -1,4 +1,6 @@
-# FBZ Visual Production Doctrine
+# FBZ Visual Production Doctrine (aka "Creative Doctrine")
+
+Search terms: creative doctrine, visual doctrine, image doctrine, anti-slop rules. File: `doctrine/Visual_Production_Doctrine.md`.
 
 Merged from 14 YouTube videos (full descriptions + cleaned transcripts in `videos/`). Built 2026-09-30 for Freedom Builderz so image, logo, header, ad, motion and page work ships at the Leonel Salas production bar without re-prompting. The operational version of this doctrine is the Claude Code skill at `skills/fbz-visual-production/SKILL.md`.
 

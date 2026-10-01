@@ -23,10 +23,10 @@ for f in files:
     try: im=Image.open(f).convert('RGB')
     except Exception as e: print('SKIP',f,e); continue
     a=np.asarray(im.resize((256,int(256*im.size[1]/im.size[0]) or 1))).astype(float)
-    lum=a.mean(axis=2); contrast=lum.std(); sat=(a.max(axis=2)-a.min(axis=2)).mean()
+    lum=a.mean(axis=2); contrast=float(np.percentile(lum,97)-np.percentile(lum,3)); sat=(a.max(axis=2)-a.min(axis=2)).mean()
     flags=[]
     if im.size[0]<1000: flags.append('low-res (<1000px wide)')
-    if contrast<28: flags.append('flat tonal range (no depth/grade)')
+    if contrast<70: flags.append('flat tonal range p3..p97 < 70 (no depth/grade)')
     if sat>95: flags.append('oversaturated')
     print(('FLAG ' if flags else 'ok   ')+os.path.relpath(f,t if os.path.isdir(t) else os.path.dirname(t))+(' :: '+', '.join(flags) if flags else ''))
     bad+=bool(flags)
